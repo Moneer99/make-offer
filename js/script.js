@@ -4,12 +4,12 @@ const headingEle = document.querySelectorAll('.heading');
 const searchItem = document.querySelectorAll('.search-item');
 const chatms = document.querySelectorAll('.chat-message');
 const input = document.getElementsByTagName('input');
-const parper =document.querySelector('.fa-paper-plane');
+const paperPlane =document.querySelector('.fa-paper-plane');
 const makeOffer =document.querySelector('.make-offer');
-
+const buttonAnim =document.querySelector('.btn-action');
 
 // console.log(input[1]);
-// console.log(parper);
+// console.log(paperPlane);
 // console.log(makeOffer)
 
 // console.log(chatms[0]);
@@ -19,11 +19,14 @@ const makeOffer =document.querySelector('.make-offer');
 
 
 
+
+function moveAction() {
+
 //clear input
 
 input[1].value = '';
 
-// Add the class 'fa-beat' after 1 second
+// Add the class 'fa-beat' after 1 second to chat message
 setTimeout(() => {
 
   chatms[0].style.visibility = 'initial';
@@ -63,14 +66,36 @@ setTimeout(() => {
 
   input[1].value = 'Moneer your offering will be ...$$$$ ?';
 
-  // move parper plane
+  // move paperPlane plane
 
-  parper.classList.add('fa-beat');
+  paperPlane.classList.add('fa-beat');
 
 },18000);
 
 
-// Add the class 'fa-beat' after 1 second
+//added move Repeat animation button
+
+setTimeout(() => {
+
+  buttonAnim.classList.add('fa-fade');
+
+},20000);
+
+
+// event when click Repeat button clear all animation 
+buttonAnim.addEventListener('click',()=>{
+
+  buttonAnim.classList.remove('fa-fade');
+  chatms[0].style.visibility = 'hidden';
+  chatms[1].style.visibility = 'hidden';
+  chatms[2].style.visibility = 'hidden';
+  paperPlane.classList.remove('fa-beat');
+  makeOffer.classList.remove('hovered');
+
+});
+
+
+// Add the class 'fa-beat' after 1 second to all option wrapper
 setTimeout(() => {
 
   iconElement.forEach(ele => {
@@ -99,7 +124,7 @@ setTimeout(() => {
 
 
 
-// Remove the class 'fa-flip' after 6 seconds
+// Remove the class 'fa-flip' after 6 seconds from option wrapper items
 setTimeout(() => {
 
   iconElement.forEach(ele => {
@@ -109,7 +134,7 @@ setTimeout(() => {
 }, 5000);
 
 
-// Remove the class 'fa-beat and bounce' after 4 seconds
+// Remove the class 'fa-beat and bounce' after 4 seconds  heading of option items
 
 setTimeout(() => {
 
@@ -129,4 +154,14 @@ setTimeout(() => {
 }, 13000);
 
 
+}
+// end moveAction function
+
+
+// Fire the function when the page loads
+
+window.onload = function() {
+  moveAction();
+
+};
 
