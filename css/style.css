@@ -1,0 +1,437 @@
+
+/* ------------------------------ General Styel ----------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&family=Poppins:wght@400;500;700&family=Roboto:wght@400;500&display=swap');
+
+
+/* Width and height for the scrollbar track */
+.chat-wrapper::-webkit-scrollbar {
+    width: 30px;  /* vertical scrollbar width */
+    height: 3px; /* horizontal scrollbar height */
+  }
+  
+  /* Track */
+.chat-wrapper::-webkit-scrollbar-track {
+    background: #1e0492; /* color of the track */
+  }
+
+.chat-wrapper::-webkit-scrollbar-thumb {
+    background: #1e0492; /* color of the track */
+    height: 3px;
+  }
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* ------------------------------ Common Style ------------------------------ */
+:root{
+    --color-option: #82859b;
+}
+.move{
+    opacity:0;
+    transform:translateY(30px);
+    animation:moveup 0.8s linear forwards;
+    }
+
+    @keyframes moveup{
+        100%{
+        opacity:1;
+        transform:translateY(0);
+        }
+    }
+
+    select{
+        
+        background: transparent;
+        /* appearance: none; */
+        outline: none;
+        border: none;
+        padding-right: 20px;
+        background-position: right center;
+        background-repeat: no-repeat;
+        width: 45px;
+      }
+
+
+/* ------------------------------  Style ----------------------------- */
+
+body{
+    font-size: 15px;
+    background: rgb(160,125,245);
+    background: linear-gradient(90deg, rgba(160,125,245,1) 0%, rgba(222,166,224,1) 62%, rgba(237,161,221,1) 100%); 
+    font-family:'Roboto', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+}
+.page-wrapper{
+    display: flex;
+    margin: 5rem 12rem;
+    background: rgb(247, 247, 247);
+    height: 600px;
+}
+
+.left-section{
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #dcddfb;
+}
+
+.person-info{
+    text-align: center;
+    padding: 2em;
+}
+
+.img-part img{
+    width: 4em;
+    border: 2px solid white;
+    border-radius: 30px;
+}
+
+
+.content-part{
+    margin-top: 0.5em;
+    position: relative;
+}
+
+.content-part h4{
+    display: inline;
+    margin-right: 0.55em;
+    font-weight: 500;
+}
+
+.content-part p{
+    color: #5a5b63;
+    font-size: 0.85rem;
+}
+
+/* ---------------------------- CREATE ARROW DOWN --------------------------- */
+.custom-arrow {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2px;
+    position: absolute;
+    top: 16px;
+    right: -8px;
+  }
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+
+  /* --------------------------------- OPTION --------------------------------- */
+  .menu-option{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .option-wrapper{
+    margin-left: 1em;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+    cursor: pointer;
+  }
+
+  .option-wrapper .icon{
+    color: var(--color-option);
+    /* width: 1.2rem; */
+    margin: 8px 18px 8px;
+  }
+
+  .option-wrapper h5{
+    color: var(--color-option);
+    letter-spacing: 1.2;
+  }
+
+  .option-wrapper:hover{
+    --color-option: #3124ee;
+  }
+
+
+  /* ------------------------------ RIGHT-SECTION ----------------------------- */
+
+  .right-section{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding:1em 4em;
+  }
+
+  .status-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    padding: 4px 20px;
+    margin-bottom: 16px;
+  }
+
+  h2.move{
+    margin-bottom: 20px;
+  }
+
+.status-wrapper .status .status-heading{
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+.status-wrapper .icon{
+    color: #82859b;
+    margin-left: 5px;
+}
+
+.chat-wrapper{
+    display: flex;
+}
+
+.chat-wrapper h2{
+    margin-left: -20px;
+    font-size: 2rem;
+  }
+
+  .search-wrapper{
+    width: 40%;
+  }
+
+.search-gold{
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.gold-coast{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    border-bottom: 1px solid #c4cbd0;
+    margin-bottom: 8px;
+}
+
+.gold-coast p{
+    display: inline-block;
+    color: #5f5c5c;
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+
+  .search-bar{
+    width: 40%;
+    border-bottom: 1px solid rgb(187, 178, 178);
+    padding: 15px 0px 0px 0px;
+    margin-bottom: 8px;
+    margin-right: 15px;
+
+  }
+
+  .search-bar i{
+    margin-right: 5px;
+    color: #5f5c5c;
+}
+
+  .search-bar input{
+      background: transparent;
+      border: none;
+      outline: none;
+  }
+
+  .search-items{
+    height: 400px;
+  }
+
+  .chat-container{
+    height: 100%;
+  }
+  
+  .search-wrapper{
+    overflow: scroll;
+    height: 100%;
+  }
+
+  .search-item{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 9px 8px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    transition: all 0.2s;
+    /* background: rgb(184, 79, 79); */
+  }
+
+.search-item:hover{
+    background-color: rgb(161, 152, 211);
+    cursor: pointer;
+}
+
+
+  .message-info{
+    display: flex;
+    align-items: center;
+  }
+
+  .search-item .person-img{
+    margin: 0 8px;
+  }
+  .person-img{
+    width: 3em;
+  border: 2px solid white;
+  border-radius: 30px;
+  }
+
+  .search-item .content-message p{
+    font-size: 12px;
+    color: #5a5b63;
+    font-weight: 500;
+  }
+
+  .search-item .massage-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+.massage-details :nth-child(1){
+    font-size: 12px;
+    color: #5a5b63;
+    font-weight: 500;
+}
+
+.massage-details :nth-child(2){
+    border-radius: 30px;
+    background: #ce3e3e;
+    color: #fff;
+    padding: 4px;
+    font-size: 12px;
+    width: 2em;
+    text-align: center;
+    margin-top: 4px;
+}
+
+/* -------------------------------- chat-view ------------------------------- */
+.chat-view{
+    width: 65%;
+    height: 400px;
+    margin-left: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chat-message{
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+    transition: all 2.8s;
+}
+
+.chat-message .person-img-wrapper{
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-message .person-img-wrapper p{
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.chat-message .content-message{
+    background: #dbd9d9;
+    border-radius: 25px;
+    padding: 6px;
+    margin-bottom: 10px;
+}
+
+.chat-message.alone{
+    justify-content: flex-end;
+
+}
+
+.chat-message.alone .content-message{
+    background: #3124ee;
+    color: aliceblue;
+}
+
+/* ---------------------------- sale-send-wrapper ---------------------------- */
+
+/* ------------------------------- option-sale ------------------------------ */
+.option-sale{
+    display: flex;
+}
+.option-sale .btn{
+    border-radius: 30px;
+    border: 1px solid hsl(0, 0%, 50%,0.2);
+    padding: 6px 10px;
+    margin-bottom: 8px;
+    margin-right: 5px;
+    transition: all 0.5s ;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.option-sale .btn:hover,.hovered{
+    background: rgb(44, 179, 44);
+}
+
+.sale-send-wrapper .send{
+    position: relative;
+}
+
+.sale-send-wrapper .send input{
+    width: 100%;
+    padding: 10px 12px;
+    /* outline: none; */
+    margin-left: 15px;
+    border: none;
+    font-size: 16px;
+    
+}
+
+.fa-face-grin-wink{
+    position: absolute;
+}
+
+.fa-paperclip{
+    color: hsl(0, 1%, 51%);
+    position: absolute;
+    right: 35px;
+    top: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.fa-paperclip:hover{
+    color:  hsl(0, 1%, 61%);
+}
+
+.fa-paper-plane{
+    background: #5656ff;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 12px;
+    padding: 8px;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    top: 4px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.fa-paper-plane:hover{
+    background: hsl(240, 100%, 55%);
+}
