@@ -61,7 +61,7 @@ setTimeout(() => {
 
   input[1].focus();
 
-  input[1].value = 'Moneer your over will be ...$$$$ ?';
+  input[1].value = 'Moneer your offering will be ...$$$$ ?';
 
   // move parper plane
 
