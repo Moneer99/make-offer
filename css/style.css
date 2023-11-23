@@ -404,6 +404,7 @@ body{
 
 .option-sale .btn:hover,.hovered{
     background: rgb(44, 179, 44);
+    color: white;
 }
 
 .sale-send-wrapper .send{
